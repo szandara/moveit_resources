@@ -22,4 +22,3 @@ moveit_simple_controller_manager:
       - panda_joint4
       - panda_joint5
       - panda_joint6
-      - panda_joint7
