@@ -6,6 +6,9 @@ controller_manager:
     panda_arm_controller:
       type: joint_trajectory_controller/JointTrajectoryController
 
+    ee_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
     joint_state_broadcaster:
       type: joint_state_broadcaster/JointStateBroadcaster
 
@@ -24,3 +27,14 @@ panda_arm_controller:
       - panda_joint4
       - panda_joint5
       - panda_joint6
+
+ee_controller:
+  ros__parameters:
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+    joints:
+      - ee_connector_joint
+      - slider_joint
