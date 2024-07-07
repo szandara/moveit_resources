@@ -4,11 +4,6 @@
 <!-- |    EDITING THIS FILE BY HAND IS NOT RECOMMENDED                                 | -->
 <!-- =================================================================================== -->
 <robot name="panda" xmlns:xacro="http://www.ros.org/wiki/xacro">
-    <link name="dummy"></link>
-    <joint name="dummy_joint" type="fixed">
-     <parent link="dummy"/>
-     <child link="panda_link0"/>
-   </joint>
     <link name="panda_link0">
         <visual>
             <geometry>
@@ -44,12 +39,12 @@
         </inertial>        
     </link>
     <joint name="panda_joint1" type="revolute">
-        <safety_controller k_position="100.0" k_velocity="40.0" soft_lower_limit="-2.8973" soft_upper_limit="2.8973" />
+        <safety_controller k_position="100.0" k_velocity="40.0" soft_lower_limit="-6.2831853" soft_upper_limit="6.2831853"  />
         <origin rpy="0 0 0" xyz="0 0 0.333" />
         <parent link="panda_link0" />
         <child link="panda_link1" />
         <axis xyz="0 0 1" />
-        <limit effort="87" lower="-2.9671" upper="2.9671" velocity="2.3925" />
+        <limit effort="87" lower="-6.2831853" upper="6.2831853" velocity="2.3925" />
     </joint>
     <link name="panda_link2">
         <visual>
@@ -144,12 +139,12 @@
         </collision>
     </link>
     <joint name="panda_joint5" type="revolute">
-        <safety_controller k_position="100.0" k_velocity="40.0" soft_lower_limit="-3.13" soft_upper_limit="3.13" />
+        <safety_controller k_position="100.0" k_velocity="40.0" soft_lower_limit="-6.2831853" soft_upper_limit="6.2831853" />
         <origin rpy="-1.57079632679 0 0" xyz="-0.0825 0.384 0" />
         <parent link="panda_link4" />
         <child link="panda_link5" />
         <axis xyz="0 0 1" />
-        <limit effort="12" lower="-3.13" upper="3.13" velocity="2.8710" />
+        <limit effort="12" lower="-6.2831853" upper="6.2831853" velocity="2.8710" />
     </joint>
     <link name="panda_link6">
         <inertial>
